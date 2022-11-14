@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html manifest="cartlist.appcache">
+<head>
+  <meta lang="ja">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CartList</title>
+  
+  <script src="./js/setupscript.js"></script>
+  <script src="./js/ls.js"></script>
+  
+  <link rel="stylesheet" type="text/css" href="./css/normalize.css" />
+  <link rel="stylesheet" type="text/css" href="./css/fuji.css" />
+  <link rel="stylesheet" type="text/css" href="./css/style.css" />
+  <link rel="icon" href="favicon.ico" type="image/ico" />
+  
+</head>
+
+<body onload="onLoadInit()" onunload="OnUnLoadInit()">
+  
+  <div class="l-wrapper m-tlbr-1">
+    <p>名前</p>
+    <input type="text" id="itemname" value="">
+	<p>個数</p>
+    <input type="text" id="itemnumber" value="">
+    <button id="addlistbutton">追加</button>
+	<br>
+	<button id="minusb">-100</button><button id="plusb">+100</button>
+	<div id="calcmoney">0</div>
+  </div>
+  <hr color="#000" size="2">
+  <div class="l-wrapper m-tlbr-1">
+	<p>まだ入れていないもの</p>
+    <div id="mainlist"></div>
+  </div>
+  <hr color="#FF9F00" size="2">
+  <div class="l-wrapper m-tlbr-1">
+    <p>入れたもの</p>
+    <div id="addedlist"></div>
+  </div>
+  <hr color="#000" size="2">
+  <div class="l-wrapper m-tlbr-1">
+    <button id="clearbutton">削除</button>
+  </div>
+  
+</body>
+</html>

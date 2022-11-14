@@ -1,0 +1,449 @@
+﻿@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP:100,300,400,700&display=swap');
+* {
+  -webkit-font-feature-settings: "palt" 1;
+  font-feature-settings: "palt" 1;
+  text-align: justify;
+  word-wrap: break-word;
+  line-height: 1.65;
+  letter-spacing: 0.15rem;
+}
+
+html {
+  color: #363636;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 62.5%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: inherit;
+  font-weight: bold;
+  line-height: 1.6;
+  margin: 0.75em 0;
+}
+
+h1 {
+  font-size: 3.4rem;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 2.6rem;
+}
+
+h4 {
+  font-size: 2.2rem;
+}
+
+h5 {
+  font-size: 2rem;
+}
+
+h6 {
+  font-size: 1.8rem;
+}
+
+p {
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+a {
+  color: #000;
+  -webkit-text-decoration: #000;
+  text-decoration: none;
+}
+a:hover, a:active {
+  color: #888;
+  -webkit-text-decoration: #888;
+  text-decoration: none;
+}
+
+ul li {
+  font-size: 1.4rem;
+  line-height: 2;
+  list-style: circle;
+}
+
+pre {
+  width: 100%;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1.4rem;
+  border: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 1em 1.4em;
+  white-space: pre;
+  word-wrap: normal;
+  box-sizing: border-box;
+}
+
+[data-ruby] {
+  position: relative;
+}
+
+[data-ruby]::before {
+  content: attr(data-ruby);
+  position: absolute;
+  letter-spacing: -0.04rem;
+  top: -1rem;
+  left: 0;
+  right: 0;
+  margin: auto;
+  padding-top: 0.2rem;
+  font-size: 0.6rem;
+}
+
+blockquote {
+  border-left: 5px solid #333;
+  padding-left: 1.6rem;
+  font-style: italic;
+}
+
+b {
+  font-weight: bold;
+}
+
+i {
+  font-style: italic;
+}
+
+.serif {
+  font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+}
+
+.gothic-serif {
+  font-family: 游ゴシック体, "Yu Gothic", YuGothic, "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+}
+
+form {
+  width: 100%;
+  margin: 1rem 0;
+  font-size: 1.4rem;
+  border: 1px dotted #ccc;
+}
+
+fieldset {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+label {
+  margin: 0.4rem 0;
+  padding: 0.6rem 0;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-weight: bold;
+}
+
+legend {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+fieldset {
+  padding: 0;
+  border-width: 0;
+}
+
+input,
+textarea {
+  outline: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: 0;
+  width: 100%;
+  padding: 0.5rem;
+  background-color: #fff;
+  border: 1px solid #d1d1d1;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  transition: 0.3s;
+}
+input:hover, input:active, input:focus,
+textarea:hover,
+textarea:active,
+textarea:focus {
+  border: 1px solid #005B98;
+}
+input:disabled,
+textarea:disabled {
+  cursor: not-allowed;
+  background: #d1d1d1;
+}
+
+input[type=radio],
+input[type=checkbox] {
+  line-height: 1.6;
+  width: 100%;
+  width: 16px;
+  height: 16px;
+  margin: 1.4rem 0;
+  justify-content: center;
+  align-items: center;
+}
+
+textarea {
+  min-height: 8rem;
+  resize: none;
+}
+
+select {
+  width: 100%;
+  padding: 1.2rem;
+  border-radius: 0;
+  text-overflow: ellipsis;
+  outline: none;
+  background: transparent;
+  background-image: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 1px solid #ccc;
+}
+
+.checkbox {
+  width: 100%;
+  display: flex;
+  align-content: space-between;
+}
+.checkbox .checkbox-label {
+  margin: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+table {
+  width: 100%;
+  font-size: 1.6rem;
+  line-height: 1.6;
+  border-collapse: collapse;
+  border: none;
+}
+table tr {
+  /*border-top:  1px #000 solid;*/
+  /*border-bottom: 1px #000 solid;*/
+}
+table th {
+  font-weight: bold;
+}
+table th,
+table td {
+  border: none;
+  padding: 1.4rem;
+}
+/*
+.l-wrapper {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0;
+}
+*/
+.l-grid {
+  width: 95%;
+  padding: 0;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 1em;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  box-orient: horizontal;
+  box-direction: normal;
+}
+
+.l-grid--1 {
+  grid-column: span 1;
+}
+
+.l-grid--2 {
+  grid-column: span 2;
+}
+
+.l-grid--3 {
+  grid-column: span 3;
+}
+
+.l-grid--4 {
+  grid-column: span 4;
+}
+
+.l-grid--5 {
+  grid-column: span 5;
+}
+
+.l-grid--6 {
+  grid-column: span 6;
+}
+
+.l-grid--7 {
+  grid-column: span 7;
+}
+
+.l-grid--8 {
+  grid-column: span 8;
+}
+
+.l-grid--9 {
+  grid-column: span 9;
+}
+
+.l-grid--10 {
+  grid-column: span 10;
+}
+
+.l-grid--11 {
+  grid-column: span 11;
+}
+
+.l-grid--12 {
+  grid-column: span 12;
+}
+
+@media screen and (max-width: 48em) {
+  .l-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .l-grid--1 {
+    grid-column: span 1;
+  }
+
+  .l-grid--2 {
+    grid-column: span 1;
+  }
+
+  .l-grid--3 {
+    grid-column: span 1;
+  }
+
+  .l-grid--4 {
+    grid-column: span 1;
+  }
+
+  .l-grid--5 {
+    grid-column: span 1;
+  }
+
+  .l-grid--6 {
+    grid-column: span 1;
+  }
+
+  .l-grid--7 {
+    grid-column: span 1;
+  }
+
+  .l-grid--8 {
+    grid-column: span 1;
+  }
+
+  .l-grid--9 {
+    grid-column: span 1;
+  }
+
+  .l-grid--10 {
+    grid-column: span 1;
+  }
+
+  .l-grid--11 {
+    grid-column: span 1;
+  }
+
+  .l-grid--12 {
+    grid-column: span 1;
+  }
+}
+@media screen and (max-width: 30em) {
+  .l-grid {
+    width: 80%;
+  }
+}
+button,
+input[type=submit],
+input[type=reset],
+input[type=button] {
+  height: 30px;
+  margin: 0.6rem 0;
+  padding: 0 10px;
+  text-align: center;
+  font-size: 1.4rem;
+  line-height: 0px;
+  letter-spacing: 0.15rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: transparent;
+  border-radius: 0;
+  color: #333;
+  border: 1px solid #ccc;
+  background: transparent;
+  box-sizing: border-box;
+}
+button.button-primary,
+input[type=submit].button-primary,
+input[type=reset].button-primary,
+input[type=button].button-primary {
+  color: #fff;
+  background-color: #005B98;
+  border: 1px solid #005B98;
+}
+button.button-primary:hover, button.button-primary:active, button.button-primary:focus,
+input[type=submit].button-primary:hover,
+input[type=submit].button-primary:active,
+input[type=submit].button-primary:focus,
+input[type=reset].button-primary:hover,
+input[type=reset].button-primary:active,
+input[type=reset].button-primary:focus,
+input[type=button].button-primary:hover,
+input[type=button].button-primary:active,
+input[type=button].button-primary:focus {
+  color: #005B98;
+  background-color: #fff;
+  border: 1px solid #005B98;
+}
+button:hover, button:active, button:focus,
+input[type=submit]:hover,
+input[type=submit]:active,
+input[type=submit]:focus,
+input[type=reset]:hover,
+input[type=reset]:active,
+input[type=reset]:focus,
+input[type=button]:hover,
+input[type=button]:active,
+input[type=button]:focus {
+  border: 1px solid #005B98;
+}
+
+.badge {
+  font-family: monospace;
+  margin: 0 0.4rem;
+  padding: 0.4rem 0.6rem;
+  font-size: 1.6rem;
+}
+
+.bg-dark {
+  color: white;
+  background: #34495e;
+}
+
+sourceMappingURL=fuji.css.map

@@ -1,0 +1,12 @@
+CACHE MANIFEST
+
+# Version 00017
+
+CACHE:
+css/fuji.css
+css/fuji.css.map
+css/normalize.css
+css/style.css
+js/setupscript.js
+js/ls.js
+favicon.ico
